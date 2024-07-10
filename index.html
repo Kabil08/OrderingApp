@@ -16,9 +16,16 @@
         root.appendChild(heading);
     </script> -->
 
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- If the react is installed via npm, the cdn links are not required now. -->
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
 
-    <script src="./ComplexNestedElements.js"></script>
+    <!-- <script src="./ComplexNestedElementsWithReactNPM.js"></script> -->
+
+    
+
+    <!-- React requires type="module" -->
+    <!-- https://parceljs.org/languages/javascript/#classic-scripts -->
+    <script type="module" src="./ComplexNestedElementsWithReactNPM.js"></script>
 </body>
 </html>
