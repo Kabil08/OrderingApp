@@ -1,0 +1,25 @@
+{
+  "name": "learnreact",
+  "version": "1.0.0",
+  "description": "Learn basics of react using this application",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Kabil08/OrderingApp.git"
+  },
+  "keywords": [
+    "MasterReact"
+  ],
+  "author": "Kabil-N",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kabil08/OrderingApp/issues"
+  },
+  "homepage": "https://github.com/Kabil08/OrderingApp#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
