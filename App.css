@@ -1,3 +1,57 @@
 #heading {
     color: red;
 }
+
+.imageTag {
+    width: 130px;
+    height: 130px;
+}
+
+.navBar {
+    display: flex;
+    padding: 10px;
+}
+
+.navBar li {
+    padding: 10px;
+    list-style-type: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.mainContainer {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.receipeImage {
+    width: 85%;
+    height: 20%;
+    border-radius: 20px;
+}
+
+.receipeList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.individualReceipe {
+    margin: 15px;
+    width: 300px;
+    height: 400px;
+    background-color:  #f2ffe6;
+    border-radius: 15px;
+}
+
+.receipeContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
