@@ -4,7 +4,7 @@
 
 .imageTag {
     width: 130px;
-    height: 130px;
+    height: 100px;
 }
 
 .navBar {
@@ -15,19 +15,18 @@
 .navBar li {
     padding: 10px;
     list-style-type: none;
-    text-decoration: underline;
     cursor: pointer;
+    font-family: 'Inter';
 }
 
 .mainContainer {
-    border: 1px solid black;
+    background-color: #f2f2f2;
     display: flex;
     justify-content: space-between;
 }
 
 .receipeImage {
-    width: 85%;
-    height: 20%;
+    width: 100%;
     border-radius: 20px;
 }
 
@@ -46,12 +45,86 @@
 
 .receipeContainer {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    margin: 15px;
 }
 
-.imageContainer {
+.receipeContainer > div {
+    margin: 5px 0px 5px 0px;
+}
+
+.receipeName {
+    font-family: 'Inter';
+    font-weight: bold;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+}
+
+.nameAndRatingContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ingredientsList {
+    font-family: 'Inter';
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.abbrStyles {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.receipeRating {
+    font-weight: bold;
+    font-family: 'Inter';
+    margin-left: 5px;
+}
+
+.imageAndCookTimeContainer {
+    position: relative;
+}
+
+.cookTime {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background-color: white;
+    border-radius: 3px;
+    padding: 5px;
+    font-family: 'Inter';
+    font-weight: bold;
+}
+
+.receipeToolbar {
+    margin: 20px;
+    display: flex;
+}
+
+.searchReceipe {
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    border: 2px solid #C7C9CD;
+    font-family: 'Inter';
+}
+
+input::placeholder {
+    padding-left: 2px;
+}
+
+.searchButton {
+    border-radius: 5px;
+    border: 2px solid #C7C9CD;
+    height: 30px;
+}
+
+.topRatedReceipes {
+    margin-left: 30px;
+    border-radius: 5px;
+    border: 2px solid #C7C9CD;
+    height: 30px;
+    font-family: 'Inter';
 }
