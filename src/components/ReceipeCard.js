@@ -1,7 +1,7 @@
 import React from "react";
 
 function Receipe({receipeData}) {
-    console.log("KKKKKKKKKKKKKKK");
+    // console.log("KKKKKKKKKKKKKKK");
 
     const { name, image, rating, ingredients, cookTimeMinutes } = receipeData;
     

@@ -5,9 +5,8 @@ import ReceipeCard from "./ReceipeCard";
 const Body = () => {
 
     const [receipeList, setReceipeList] = useState([]);
-
-    console.log("RENDERRRR");
-    console.log(receipeList, "TIMES");
+    const [searchValue, setSearchValue] = useState("");
+    const [filteredReceipe, setFilteredReceipe] = useState([]);
 
     useEffect(() => {
         // fetch('https://dummyjson.com/recipes')
@@ -23,16 +22,51 @@ const Body = () => {
         const { recipes } = result;
 
         setReceipeList(recipes);
+        setFilteredReceipe(recipes);
+    }
+
+    const onClickSearch = () => {
+        const filValues = receipeList.filter((r) => r.name.toLowerCase().includes(searchValue.toLowerCase()));
+        setFilteredReceipe(filValues);
     }
 
 
     return (
         <div>
+            <div className="receipeToolbar">
+                <div>
+                    <input 
+                        type="text"
+                        className="searchReceipe"
+                        placeholder="What do you want to cook today?"
+                        value={searchValue}
+                        onChange={(e) => {
+                            setSearchValue(e.target.value);
+                        }}
+                        onKeyDown={(event) => {
+                            if (event.key === 'Enter') {
+                                onClickSearch();
+                            }
+                        }}
+                    />
+                    <button 
+                        onClick={onClickSearch}
+                        className="searchButton"
+                    >
+                        🔍
+                    </button>
+                </div>
+                {/* <div>
+                    <button className="topRatedReceipes">
+                        Top-rated receipes
+                    </button>
+                </div> */}
+            </div>
             {receipeList.length === 0 ? (
                 <div>Loading...</div>
             ): (
                 <div className="receipeList">
-                    {receipeList.map((data) => (
+                    {filteredReceipe.map((data) => (
                         <ReceipeCard receipeData={data} />
                     ))}
                 </div>

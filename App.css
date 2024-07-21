@@ -119,6 +119,7 @@ input::placeholder {
     border-radius: 5px;
     border: 2px solid #C7C9CD;
     height: 30px;
+    cursor: pointer;
 }
 
 .topRatedReceipes {
