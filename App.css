@@ -129,3 +129,7 @@ input::placeholder {
     height: 30px;
     font-family: 'Inter';
 }
+
+.topRatedReceipes {
+    cursor: pointer;
+}

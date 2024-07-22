@@ -30,6 +30,12 @@ const Body = () => {
         setFilteredReceipe(filValues);
     }
 
+    const onClickTopRatedReceipes = () => {
+        const resultedReceipes = receipeList.filter((r) => r.rating > 4.8);
+        setFilteredReceipe(resultedReceipes);
+        setSearchValue("");
+    }
+
 
     return (
         <div>
@@ -56,11 +62,11 @@ const Body = () => {
                         🔍
                     </button>
                 </div>
-                {/* <div>
-                    <button className="topRatedReceipes">
+                <div>
+                    <button onClick={onClickTopRatedReceipes} className="topRatedReceipes">
                         Top-rated receipes
                     </button>
-                </div> */}
+                </div>
             </div>
             {receipeList.length === 0 ? (
                 <div>Loading...</div>
