@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import { Link } from "react-router-dom";
 import ReceipeCard from "./ReceipeCard";
 
 
@@ -73,7 +74,9 @@ const Body = () => {
             ): (
                 <div className="receipeList">
                     {filteredReceipe.map((data) => (
-                        <ReceipeCard receipeData={data} />
+                        <Link className="linkText" to={`/receipe/${data?.id}`}>
+                            <ReceipeCard receipeData={data} />
+                        </Link>
                     ))}
                 </div>
             )}

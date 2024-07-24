@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import ReachUs from "./components/ReachUs";
 import ErrorBoundary from "./components/ErrorBoundary";
+import ReceipeInfo from "./components/ReceipeInfo";
 
 const Layout = () => {
     return (
@@ -28,6 +29,10 @@ const mainRoutes = createBrowserRouter([
             {
                 path: "/reach-us",
                 element: <ReachUs />
+            },
+            {
+                path: "/receipe/:id",
+                element: <ReceipeInfo />
             }
         ]
     },

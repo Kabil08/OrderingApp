@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
     return (
         <div className="mainContainer">
@@ -10,9 +12,15 @@ const Header = () => {
             </div>
             <div>
                 <ul className="navBar">
-                    <li>🏠 Home</li>
-                    <li>📱 Reach Us</li>
-                    <li>📝 Feedback</li>
+                    <Link to="/" className="linkText">
+                        <li>🏠 Home</li>
+                    </Link>
+                    <Link to="/reach-us" className="linkText">
+                        <li>📱 Reach Us</li>
+                    </Link>
+                    <Link to="/" className="linkText">
+                        <li>📝 Feedback</li>
+                    </Link>
                 </ul>
             </div>
         </div>
