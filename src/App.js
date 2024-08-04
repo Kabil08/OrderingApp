@@ -1,17 +1,22 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Header from "./components/Header";
-import Body from "./components/Body";
+// import Header from "./components/Header";
+// import Body from "./components/Body";
 import ReachUs from "./components/ReachUs";
 import ErrorBoundary from "./components/ErrorBoundary";
 import ReceipeInfo from "./components/ReceipeInfo";
 
+const Body = lazy(() => import("./components/Body"));
+const Header = lazy(() => import("./components/Header"));
+
 const Layout = () => {
     return (
         <>
-            <Header />
-            <Outlet />
+            <Suspense>
+                <Header />
+                <Outlet />
+            </Suspense>
         </>
     )
 }
@@ -24,11 +29,15 @@ const mainRoutes = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Body />
+                element: (
+                    <Suspense fallback={<h1>Results Pending....</h1>}>
+                        <Body />
+                    </Suspense>
+                )
             },
             {
                 path: "/reach-us",
-                element: <ReachUs />
+                element: <ReachUs mobileNo="9990001010" />
             },
             {
                 path: "/receipe/:id",

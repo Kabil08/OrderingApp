@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../customHooks/useOnlineStatus";
 
 const Header = () => {
+    const onlineStatus = useOnlineStatus();
+
     return (
         <div className="mainContainer">
             <div>
@@ -21,6 +24,7 @@ const Header = () => {
                     <Link to="/" className="linkText">
                         <li>📝 Feedback</li>
                     </Link>
+                    <li className="onlineStatus">Online Status: {onlineStatus} {onlineStatus ? "🟢" : "🔴"} </li>
                 </ul>
             </div>
         </div>
