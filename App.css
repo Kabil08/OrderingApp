@@ -1,3 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .li-item {
+        @apply p-2.5 list-none cursor-pointer font-custom-inter;
+    }
+}
+
 #heading {
     color: red;
 }
@@ -7,17 +17,17 @@
     height: 100px;
 }
 
-.navBar {
+/* .navBar {
     display: flex;
     padding: 10px;
-}
+} */
 
-.navBar li {
+/* .navBar li {
     padding: 10px;
     list-style-type: none;
     cursor: pointer;
     font-family: 'Inter';
-}
+} */
 
 .mainContainer {
     background-color: #f2f2f2;
@@ -118,7 +128,7 @@ input::placeholder {
 .searchButton {
     border-radius: 5px;
     border: 2px solid #C7C9CD;
-    height: 30px;
+    height: 28px;
     cursor: pointer;
 }
 
@@ -128,15 +138,7 @@ input::placeholder {
     border: 2px solid #C7C9CD;
     height: 30px;
     font-family: 'Inter';
-}
-
-.topRatedReceipes {
     cursor: pointer;
-}
-
-.linkText {
-    text-decoration: none;
-    color: black;
 }
 
 .receipeInfo {
@@ -153,9 +155,13 @@ input::placeholder {
 }
 
 .receipeInfoImage {
-    width: 300;
+    /* width: 300px; */
     height: 300px;
     border-radius: 10px;
+}
+
+.receipeBody {
+    width: 100%;
 }
 
 .receipeBody > div {
@@ -191,4 +197,19 @@ input::placeholder {
 .onlineStatus {
     background-color: #f2f2f2;
     cursor: not-allowed !important;
+}
+
+.individualCookTime {
+    position: absolute;
+    left: 15px;
+    background-color: white;
+    border-radius: 3px;
+    padding: 5px;
+    font-family: 'Inter';
+    font-weight: bold;
+    margin-bottom: -20px;
+}
+
+.imageWidthContainer {
+    width: 30%;
 }

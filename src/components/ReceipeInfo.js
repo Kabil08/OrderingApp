@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import cn from "classnames";
 
 const ReceipeInfo = () => {
     const [receipeInfo, setReceipeInfo] = useState(null);
@@ -21,15 +22,12 @@ const ReceipeInfo = () => {
 
     return (
         <div className="receipeInfo">
-            <div className="imageAndCookTimeContainer">
-                <img 
+            <div className={cn("imageAndCookTimeContainer", "imageWidthContainer")}>
+                <img
                     src={image}
                     alt='receipeImage'
                     className="receipeInfoImage"
                 />
-                <div className="cookTime">
-                    <span>⏳ {cookTimeMinutes} min</span>
-                </div>
             </div>
             <div className="receipeBody">
                 <div className="receipeInfoName">{`${name} (${cuisine} ⭐${rating})`}</div>

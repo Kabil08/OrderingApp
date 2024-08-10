@@ -40,11 +40,11 @@ const Body = () => {
 
     return (
         <div>
-            <div className="receipeToolbar">
+            <div className="flex m-5">
                 <div>
                     <input 
                         type="text"
-                        className="searchReceipe"
+                        className="w-63 h-7 rounded border-2 border-solid border-custom-gray"
                         placeholder="What do you want to cook today?"
                         value={searchValue}
                         onChange={(e) => {
@@ -58,23 +58,23 @@ const Body = () => {
                     />
                     <button 
                         onClick={onClickSearch}
-                        className="searchButton"
+                        className="rounded border-2 border-solid border-custom-gray h-7 cursor-pointer"
                     >
                         🔍
                     </button>
                 </div>
                 <div>
-                    <button onClick={onClickTopRatedReceipes} className="topRatedReceipes">
-                        Top-rated receipes
+                    <button onClick={onClickTopRatedReceipes} className="ml-8 rounded border-2 border-solid border-custom-gray">
+                        <span className="mx-3">Top-rated receipes</span>
                     </button>
                 </div>
             </div>
             {receipeList.length === 0 ? (
                 <div>Loading...</div>
             ): (
-                <div className="receipeList">
+                <div className="flex flex-wrap">
                     {filteredReceipe.map((data) => (
-                        <Link className="linkText" to={`/receipe/${data?.id}`}>
+                        <Link to={`/receipe/${data?.id}`}>
                             <ReceipeCard receipeData={data} />
                         </Link>
                     ))}
